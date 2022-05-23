@@ -1,0 +1,33 @@
+#!/bin/bash
+# set -o errexit
+
+bin/cli bin/magento setup:install \
+  --db-host="db" \
+  --db-name="magento" \
+  --db-user="magento" \
+  --db-password="magento" \
+  --base-url=https://magento.dev.com \
+  --base-url-secure=https://magento.dev.com \
+  --backend-frontname="admin" \
+  --admin-firstname="Hiep" \
+  --admin-lastname="Tran" \
+  --admin-email="hiep1998vnhn11@gmail.com" \
+  --admin-user="admin" \
+  --admin-password="admin123" \
+  --currency=USD \
+  --cache-backend=redis \
+  --cache-backend-redis-server=redis \
+  --cache-backend-redis-db=0 \
+  --page-cache=redis \
+  --page-cache-redis-server=redis \
+  --page-cache-redis-db=1 \
+  --session-save=redis \
+  --session-save-redis-host=redis \
+  --session-save-redis-log-level=4 \
+  --session-save-redis-db=2 \
+  --search-engine=elasticsearch7 \
+  --elasticsearch-host=elasticsearch \
+  --elasticsearch-port=9200 \
+  --use-rewrites=1 \
+  --no-interaction \
+  --cleanup-database
